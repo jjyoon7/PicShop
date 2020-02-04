@@ -2,7 +2,7 @@ import React, {useContext} from "react"
 
 const Context = React.createContext()
 
-function contextProvider(props) {
+function ContextProvider(props) {
     const context = useContext(Context)
     return (
         <Provider>
@@ -11,4 +11,4 @@ function contextProvider(props) {
     )
 }
 
-export default contextProvider
+export default ContextProvider
