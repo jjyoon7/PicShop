@@ -6,7 +6,7 @@ function ContextProvider(props) {
     const context = useContext(Context)
     return (
         <Context.Provider>
-            <props.children/>
+            {props.children}
         </Context.Provider>
     )
 }
