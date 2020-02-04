@@ -5,9 +5,9 @@ const Context = React.createContext()
 function ContextProvider(props) {
     const context = useContext(Context)
     return (
-        <Provider>
+        <Context.Provider>
             <props.children/>
-        </Provider>
+        </Context.Provider>
     )
 }
 
