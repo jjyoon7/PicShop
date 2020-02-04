@@ -136,9 +136,9 @@ a:visited { color: var(--light-blue); }
 a:hover { color: var(--light-blue); }
 a:active { color: var(--light-blue); }
 
-i {
+/* i {
     width: 130px;
     height: 130px;
     color: black;
     z-index: 100000000;
-}
+} */
