@@ -1,9 +1,8 @@
-import React, {useContext} from "react"
+import React from "react"
 
 const Context = React.createContext()
 
 function ContextProvider(props) {
-    const context = useContext(Context)
     return (
         <Context.Provider>
             {props.children}
@@ -11,4 +10,4 @@ function ContextProvider(props) {
     )
 }
 
-export default ContextProvider
+export {ContextProvider, Context}
