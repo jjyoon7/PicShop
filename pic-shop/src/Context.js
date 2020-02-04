@@ -4,7 +4,7 @@ const Context = React.createContext()
 
 function ContextProvider(props) {
     return (
-        <Context.Provider>
+        <Context.Provider value="">
             {props.children}
         </Context.Provider>
     )
