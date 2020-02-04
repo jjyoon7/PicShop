@@ -137,8 +137,8 @@ a:hover { color: var(--light-blue); }
 a:active { color: var(--light-blue); }
 
 i {
-    width: 30px;
-    height: 30px;
+    width: 130px;
+    height: 130px;
     color: black;
     z-index: 100000000;
 }

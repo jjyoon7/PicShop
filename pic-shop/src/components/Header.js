@@ -4,7 +4,7 @@ function Header() {
     return (
         <header>
             <h2>Pic Some</h2>
-            <i className="fas fa-shopping-cart"></i>
+            <i className="fas fa-shopping-cart">he</i>
         </header>
     )
 }
