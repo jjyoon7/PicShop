@@ -10,7 +10,9 @@ function ContextProvider(props) {
             .then(response => response.json())
             .then(data => setPhotosArr(data))
     }, []) 
-    
+
+    console.log(photosArr)
+
     return (
         <Context.Provider value={{photosArr}}>
             {props.children}
