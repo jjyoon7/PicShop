@@ -17,7 +17,7 @@ function App() {
             <Cart/>
           </Route>
           <Route>
-            <Photos path="/photos"/>
+            <Photos exact path="/"/>
           </Route>
         </Switch>
       </div>
