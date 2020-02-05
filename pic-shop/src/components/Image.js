@@ -12,7 +12,7 @@ function Image({className, img}) {
         <div 
             onMouseEnter={() => setHovered(true)} 
             onMouseLeave={() => setHovered(false)}
-            onClick={() => toggleFavorite}
+            onClick={() => toggleFavorite(img.id)}
             className={`${className} image-container`}
         >
             <img src={img.url} className="image-grid"/>
