@@ -13,9 +13,11 @@ function ContextProvider(props) {
     }, []) 
 
 
-    function toggleFavorite() {
-        setIsFavorite( prevFav => prevFav === false ? true : false)
-        console.log(isFavorited)
+    function toggleFavorite(e) {
+        const currentPic = e.target;
+        const favPic = photosArr.filter(pic => (pic.id === currentPic.id ? pic : "not matched"))
+        console.log(favPic)
+        return favPic
     }
 
     console.log(photosArr)
