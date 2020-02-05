@@ -6,7 +6,7 @@ function Photos() {
     const {photosArr, toggleFavorite} = useContext(Context)
 
     const photos = photosArr.map((photo, i) => 
-        <Image key={photo.id} img={photo} className={getClass(i)} toggleFavorite={toggleFavorite}/>
+        <Image key={photo.id} img={photo} className={getClass(i)}/>
     )
     return (
         <main className="photos">

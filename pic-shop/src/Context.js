@@ -13,11 +13,15 @@ function ContextProvider(props) {
     }, []) 
 
 
-    function toggleFavorite(e) {
-        const currentPic = e.target;
-        const favPic = photosArr.filter(pic => (pic.id === currentPic.id ? pic : "not matched"))
-        console.log(favPic)
-        return favPic
+    function toggleFavorite(id) {
+        const updateArr = photosArr.filter(pic => {
+            if(pic.id === id){
+                console.log(id)
+                console.log(!pic.id)
+                return {...pic, isFavorite: !pic.isFavorite}
+            }
+            return pic
+        })
     }
 
     console.log(photosArr)
