@@ -4,7 +4,6 @@ const Context = React.createContext()
 
 function ContextProvider(props) {
     const [photosArr, setPhotosArr] = useState([])
-    const [isFavorited, setIsFavorite] = useState(false)
 
     useEffect(() => {
         fetch("https://raw.githubusercontent.com/bobziroll/scrimba-react-bootcamp-images/master/images.json")
@@ -14,7 +13,7 @@ function ContextProvider(props) {
 
 
     function toggleFavorite(id) {
-        const updateArr = photosArr.filter(pic => {
+        const updateArr = photosArr.map(pic => {
             if(pic.id === id){
                 console.log(id)
                 console.log(!pic.isFavorite)
@@ -22,9 +21,9 @@ function ContextProvider(props) {
             }
             return pic
         })
+        setPhotosArr(updateArr)
     }
 
-    console.log(photosArr)
 
     return (
         <Context.Provider value={{photosArr, toggleFavorite}}>
