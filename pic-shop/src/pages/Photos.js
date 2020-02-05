@@ -1,15 +1,17 @@
 import React, {useContext} from "react"
 import {Context} from "../Context"
-
+import Image from "../components/Image"
+import {getClass} from "../utils"
 function Photos() {
     const {photosArr} = useContext(Context)
 
-    // console.log(photosArr)
-    const photos = photosArr.map(photo => <img key={photo.id} src={photo.url}></img>)
+    const photos = photosArr.map((photo, i) => 
+        <Image key={photo.id} img={photo} className={getClass(i)} />
+    )
     return (
-        <div>
+        <main className="photos">
             {photos}
-        </div>
+        </main>
     )
 }
 
