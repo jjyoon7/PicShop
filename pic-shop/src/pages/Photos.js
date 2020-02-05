@@ -3,10 +3,10 @@ import {Context} from "../Context"
 import Image from "../components/Image"
 import {getClass} from "../utils"
 function Photos() {
-    const {photosArr} = useContext(Context)
+    const {photosArr, toggleFavorite} = useContext(Context)
 
     const photos = photosArr.map((photo, i) => 
-        <Image key={photo.id} img={photo} className={getClass(i)} />
+        <Image key={photo.id} img={photo} className={getClass(i)} onClick={toggleFavorite}/>
     )
     return (
         <main className="photos">
