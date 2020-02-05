@@ -17,7 +17,7 @@ function ContextProvider(props) {
         const updateArr = photosArr.filter(pic => {
             if(pic.id === id){
                 console.log(id)
-                console.log(!pic.id)
+                console.log(!pic.isFavorite)
                 return {...pic, isFavorite: !pic.isFavorite}
             }
             return pic
