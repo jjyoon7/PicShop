@@ -26,7 +26,7 @@ function ContextProvider(props) {
     function addImg(imgObj) {
         const addedImgs = photosArr.map(img => {
             if(img.id === imgObj.id) {
-                console.log("addded to cart");
+                console.log(img);
                 return {...img}
             }
             return img
