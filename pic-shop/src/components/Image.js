@@ -15,7 +15,6 @@ function Image({className, img}) {
     }    
     const plusIcon = hovered && <i className="ri-add-circle-line cart"></i>
 
-    console.log(img)
     return (
         <div 
             onMouseEnter={() => setHovered(true)} 
@@ -30,10 +29,10 @@ function Image({className, img}) {
 }
 
 Image.propTypes = {
-    className: PropTypes.string.isRequired,
+    className: PropTypes.string,
     img: PropTypes.shape({
-        id:PropTypes.string,
-        url:PropTypes.string,
+        id:PropTypes.string.isRequired,
+        url:PropTypes.string.isRequired,
         isFavorite: PropTypes.bool
     })
 }
