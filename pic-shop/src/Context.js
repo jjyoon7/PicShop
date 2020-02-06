@@ -23,20 +23,16 @@ function ContextProvider(props) {
         setPhotosArr(updateArr)
     }
 
-    function addImg(imgObj) {
-        const addedImgs = photosArr.map(img => {
-            if(img.id === imgObj.id) {
-                console.log(img);
-                return {...img}
-            }
-            return img
-        })
-        setCartItems(addedImgs)
+    function addImg(newImg) {
+        setCartItems(prevProducts => [...prevProducts, newImg])
     }
 
+    function removeImg(id) {
+        setCartItems(prevItems => prevItems.filter(item => item.id !== id))
+    }
 
     return (
-        <Context.Provider value={{photosArr, toggleFavorite, addImg, cartItems}}>
+        <Context.Provider value={{photosArr, toggleFavorite, addImg, removeImg, cartItems}}>
             {props.children}
         </Context.Provider>
     )

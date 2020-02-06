@@ -1,7 +1,8 @@
-import React from "react"
+import React, {useContext} from "react"
 import {Link} from "react-router-dom"
-
+import {Context} from "../Context"
 function Header() {
+    const {cartItems} = useContext(Context)
     return (
         <header>
             <h2>
