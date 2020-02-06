@@ -24,7 +24,7 @@ function ContextProvider(props) {
     }
 
     function addImg(newImg) {
-        setCartItems(prevProducts => [...prevProducts, newImg])
+        setCartItems(prevItems => [...prevItems, newImg])
     }
 
     function removeImg(id) {
