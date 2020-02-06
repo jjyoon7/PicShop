@@ -1,5 +1,6 @@
 import React, {useState, useContext} from "react";
 import {Context} from "../Context"
+import PropTypes from "prop-types";
 
 function Image({className, img}) {
     const [hovered, setHovered] = useState(false)
@@ -14,12 +15,7 @@ function Image({className, img}) {
     }    
     const plusIcon = hovered && <i className="ri-add-circle-line cart"></i>
 
-    //when the hear icon is clicked,
-    // if(img.isFavorite) {
-    //     <i className="ri-heart-fill favorite"></i>
-    // } else {
-    //     <i className="ri-heart-line favorite"
-    // }
+    console.log(img)
     return (
         <div 
             onMouseEnter={() => setHovered(true)} 
@@ -31,6 +27,15 @@ function Image({className, img}) {
             {plusIcon}
         </div>
     )
+}
+
+Image.propTypes = {
+    className: PropTypes.string.isRequired,
+    img: PropTypes.shape({
+        id:PropTypes.string,
+        url:PropTypes.string,
+        isFavorite: PropTypes.bool
+    })
 }
 
 export default Image
