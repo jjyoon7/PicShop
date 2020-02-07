@@ -2,6 +2,7 @@ import React, {useContext} from "react"
 import {Context} from "../Context"
 import Image from "../components/Image"
 import {getClass} from "../utils"
+
 function Photos() {
     const {photosArr, toggleFavorite} = useContext(Context)
 
