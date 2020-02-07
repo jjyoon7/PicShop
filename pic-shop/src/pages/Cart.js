@@ -3,9 +3,9 @@ import {Context} from "../Context"
 import CartItem from "../components/CartItem"
 
 function Cart() {
-    const {cartItems} = useContext(Context)
+    const {cartItems, removeImg} = useContext(Context)
     const cartItemElements = cartItems.map(item => (
-        <CartItem key={item.id} item={item}/>
+        <CartItem key={item.id} item={item} removeImg={removeImg}/>
     ))
     return (
         <main>
